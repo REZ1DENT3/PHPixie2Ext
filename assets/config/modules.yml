@@ -1,0 +1,9 @@
+2.*-dev:
+  db: '\PHPixie\DB'
+  orm: '\PHPixie\ORM'
+  auth: '\PHPixie\Auth'
+  email: '\PHPixie\Email'
+  image: '\PHPixie\Image'
+  haml: '\PHPixie\Haml'
+  cache: '\PHPixie\Cache'
+3.*-dev:

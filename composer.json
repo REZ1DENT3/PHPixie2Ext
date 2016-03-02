@@ -1,0 +1,25 @@
+{
+  "name": "phpixie/project",
+  "type": "project",
+  "description": "",
+  "license": "BSD",
+  "autoload": {
+    "psr-0": {
+      "": "classes/"
+    }
+  },
+  "require": {
+    "phpixie/core": "2.*@dev",
+    "phpixie/haml": "2.*@dev",
+    "mthaml/mthaml": "dev-master",
+    "symfony/yaml": "^3.0",
+    "tedivm/stash": "^0.14.1",
+
+    "phpixie/slice": "3.x-dev"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.*-dev"
+    }
+  }
+}

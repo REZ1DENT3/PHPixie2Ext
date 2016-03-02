@@ -1,0 +1,10 @@
+api:
+  - "/api/v<version>/<action>(/<id>)"
+  -
+    controller: "api"
+
+default:
+  - "(/<controller>(/<action>(/<id>)))"
+  -
+    controller: "hello"
+    action: "default"

@@ -1,0 +1,52 @@
+<?php
+
+namespace App;
+
+/**
+ * Base controller
+ *
+ * @property-read \App\Pixie $pixie Pixie dependency container
+ * @property-read \PHPixie\Haml\View $view
+ */
+class Page extends \Ext\Controller
+{
+
+    private $_row = array();
+
+    public function __get($name)
+    {
+        if (isset($this->_row[$name])) {
+            return $this->_row[$name];
+        }
+        return null;
+    }
+
+    public function __set($name, $value)
+    {
+        if (isset($this->_row[$name])) {
+            $this->_row[$name] = $value;
+        }
+        else if ($name == 'view') {
+            $this->_row[$name] = $this->pixie->haml->get($value);
+        }
+    }
+
+    public function next($data)
+    {
+        if (is_array($data)) {
+            $this->response->add_header('Content-Type: application/json');
+            $this->response->body = json_encode($data);
+        }
+        else if (is_string($data) && json_decode($data)) {
+            $this->response->add_header('Content-Type: application/json');
+            $this->response->body = $data;
+        }
+        else if (is_object($this->view) && in_array('PHPixie\View', class_parents($this->view))) {
+            $this->response->body = $this->view->render();
+        }
+        else {
+            $this->response->body = $data;
+        }
+    }
+}
+
