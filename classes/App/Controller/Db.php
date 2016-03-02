@@ -8,12 +8,7 @@ class Db extends RESTful
 {
     public function defaultGet()
     {
-
-        $this->view = 'main';
-        $this->view->title = 'Test';
-        $this->view->subview = 'hello';
-        $this->view->message = 'Have fun coding';
-
+        
         $orm = $this->pixie->orm;
 
         $newArticle = $orm->createEntity('article');
