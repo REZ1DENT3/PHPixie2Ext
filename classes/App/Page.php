@@ -23,8 +23,14 @@ class Page extends \Ext\Controller
 
     public function __set($name, $value)
     {
-        if ($name == 'view') {
-            $this->_row[$name] = $this->pixie->haml->get($value);
+        switch ($name) {
+            case 'view':
+                $this->_row[$name] = $this->pixie->haml->get($value);
+                break;
+
+            case 'db':
+                $this->_row = $this->pixie->database->get($value);
+                break;
         }
     }
 
