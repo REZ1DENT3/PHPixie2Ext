@@ -11,15 +11,9 @@
   "require": {
     "phpixie/core": "2.*@dev",
     "phpixie/haml": "2.*@dev",
+    "phpixie/auth-orm": "3.x-dev",
     "mthaml/mthaml": "dev-master",
     "symfony/yaml": "^3.0",
-    "tedivm/stash": "^0.14.1",
-
-    "phpixie/slice": "3.x-dev"
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "2.*-dev"
-    }
+    "tedivm/stash": "^0.14.1"
   }
 }

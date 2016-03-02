@@ -4,9 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4fcb4a5e9e12f8a70482f5415d0f3246",
-    "content-hash": "8d3f710516507c7067cf2a4119df9452",
+    "hash": "f9ac780dacb45c07a8b6a8bb1eadf74e",
+    "content-hash": "e6d1f6258dd817036a02ffd6b65b151a",
     "packages": [
+        {
+            "name": "ircmaxell/password-compat",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ircmaxell/password_compat.git",
+                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/5c5cde8822a69545767f7c7f3058cb15ff84614c",
+                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/password.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthony Ferrara",
+                    "email": "ircmaxell@php.net",
+                    "homepage": "http://blog.ircmaxell.com"
+                }
+            ],
+            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
+            "homepage": "https://github.com/ircmaxell/password_compat",
+            "keywords": [
+                "hashing",
+                "password"
+            ],
+            "time": "2014-11-20 16:49:30"
+        },
         {
             "name": "mthaml/mthaml",
             "version": "dev-master",
@@ -79,31 +121,83 @@
             "time": "2015-12-17 09:48:00"
         },
         {
+            "name": "paragonie/random_compat",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "f078eba3bcf140fd69b5fcc3ea5ac809abf729dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/f078eba3bcf140fd69b5fcc3ea5ac809abf729dc",
+                "reference": "f078eba3bcf140fd69b5fcc3ea5ac809abf729dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*"
+            },
+            "suggest": {
+                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2016-02-29 17:25:04"
+        },
+        {
             "name": "phpixie/auth",
-            "version": "2.x-dev",
+            "version": "3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Auth.git",
-                "reference": "72acddaffe65dd62cb3d56f66b37b2a3a0d9d5de"
+                "reference": "fd59729f82d1a729048c1394222774c956f04c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/Auth/zipball/72acddaffe65dd62cb3d56f66b37b2a3a0d9d5de",
-                "reference": "72acddaffe65dd62cb3d56f66b37b2a3a0d9d5de",
+                "url": "https://api.github.com/repos/PHPixie/Auth/zipball/fd59729f82d1a729048c1394222774c956f04c2d",
+                "reference": "fd59729f82d1a729048c1394222774c956f04c2d",
                 "shasum": ""
             },
             "require": {
-                "phpixie/core": "2.*@dev"
+                "phpixie/slice": "~3.0"
+            },
+            "require-dev": {
+                "phpixie/test": "~3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PHPixie": "classes/"
+                "psr-4": {
+                    "PHPixie\\": "src/PHPixie",
+                    "PHPixie\\Tests\\": "tests/PHPixie/Tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -117,41 +211,97 @@
                     "homepage": "http://dracony.org"
                 }
             ],
-            "description": "PHPixie Auth library",
+            "description": "Auth library for PHPixie",
             "homepage": "http://phpixie.com",
             "keywords": [
-                "Authentication",
-                "authorization",
-                "facebook"
+                "auth"
             ],
-            "time": "2014-11-12 18:46:22"
+            "time": "2016-02-26 09:15:03"
         },
         {
-            "name": "phpixie/cache",
+            "name": "phpixie/auth-login",
+            "version": "3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPixie/Auth-Login.git",
+                "reference": "9e4ae328fc8b2654e4cf837be0e5d594092d15ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPixie/Auth-Login/zipball/9e4ae328fc8b2654e4cf837be0e5d594092d15ea",
+                "reference": "9e4ae328fc8b2654e4cf837be0e5d594092d15ea",
+                "shasum": ""
+            },
+            "require": {
+                "phpixie/auth": "3.*@dev",
+                "phpixie/security": "3.*@dev",
+                "phpixie/slice": "3.*@dev"
+            },
+            "require-dev": {
+                "phpixie/test": "3.*@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPixie\\": "src/PHPixie",
+                    "PHPixie\\Tests\\": "tests/PHPixie/Tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Tsiupa",
+                    "email": "draconyster@gmail.com",
+                    "homepage": "http://dracony.org"
+                }
+            ],
+            "description": "Auth password login library for PHPixie",
+            "homepage": "http://phpixie.com",
+            "keywords": [
+                "auth"
+            ],
+            "time": "2015-10-11 00:12:46"
+        },
+        {
+            "name": "phpixie/auth-orm",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dracony/PHPixie-Cache.git",
-                "reference": "4d717332068eb02fd82d48ad60144ba88cb068e3"
+                "url": "https://github.com/PHPixie/Auth-ORM.git",
+                "reference": "60f16843bd01d8be8264022b2397913319714b3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dracony/PHPixie-Cache/zipball/4d717332068eb02fd82d48ad60144ba88cb068e3",
-                "reference": "4d717332068eb02fd82d48ad60144ba88cb068e3",
+                "url": "https://api.github.com/repos/PHPixie/Auth-ORM/zipball/60f16843bd01d8be8264022b2397913319714b3e",
+                "reference": "60f16843bd01d8be8264022b2397913319714b3e",
                 "shasum": ""
             },
             "require": {
-                "phpixie/db": "2.*@dev"
+                "phpixie/auth": "~3.0",
+                "phpixie/auth-login": "~3.0",
+                "phpixie/orm": "~3.0"
+            },
+            "require-dev": {
+                "phpixie/test": "~3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PHPixie": "classes/"
+                "psr-4": {
+                    "PHPixie\\": "src/PHPixie",
+                    "PHPixie\\Tests\\": "tests/PHPixie/Tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -165,16 +315,13 @@
                     "homepage": "http://dracony.org"
                 }
             ],
-            "description": "Cache library for PHPixie",
+            "description": "ORM wrappers for auuth",
             "homepage": "http://phpixie.com",
             "keywords": [
-                "apc",
-                "cache",
-                "database",
-                "memcache",
-                "xcache"
+                "auth",
+                "orm"
             ],
-            "time": "2015-04-05 10:37:28"
+            "time": "2015-10-11 00:07:31"
         },
         {
             "name": "phpixie/core",
@@ -223,31 +370,35 @@
             "time": "2015-04-16 11:59:58"
         },
         {
-            "name": "phpixie/db",
-            "version": "dev-master",
+            "name": "phpixie/database",
+            "version": "3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dracony/PHPixie-DB.git",
-                "reference": "e6b46a322234da7cdf7d7d3645c108018cad9ac6"
+                "url": "https://github.com/PHPixie/Database.git",
+                "reference": "ec67d70f5f36c732d6e73e474596b5351c9a21c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dracony/PHPixie-DB/zipball/e6b46a322234da7cdf7d7d3645c108018cad9ac6",
-                "reference": "e6b46a322234da7cdf7d7d3645c108018cad9ac6",
+                "url": "https://api.github.com/repos/PHPixie/Database/zipball/ec67d70f5f36c732d6e73e474596b5351c9a21c9",
+                "reference": "ec67d70f5f36c732d6e73e474596b5351c9a21c9",
                 "shasum": ""
             },
             "require": {
-                "phpixie/core": "2.*@dev"
+                "phpixie/slice": "~3.0"
+            },
+            "require-dev": {
+                "phpixie/test": "~3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PHPixie": "classes/"
+                "psr-4": {
+                    "PHPixie\\": "src/PHPixie",
+                    "PHPixie\\Tests\\": "tests/PHPixie/Tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -269,54 +420,7 @@
                 "postgresql",
                 "sqlite"
             ],
-            "time": "2014-11-07 09:09:11"
-        },
-        {
-            "name": "phpixie/email",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dracony/PHPixie-swift-mailer.git",
-                "reference": "0fd099ecc71260a84ef7eba75533e9b744601310"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dracony/PHPixie-swift-mailer/zipball/0fd099ecc71260a84ef7eba75533e9b744601310",
-                "reference": "0fd099ecc71260a84ef7eba75533e9b744601310",
-                "shasum": ""
-            },
-            "require": {
-                "phpixie/core": "2.*@dev",
-                "swiftmailer/swiftmailer": "4.3.*@dev"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "PHPixie": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Tsiupa",
-                    "email": "draconyster@gmail.com",
-                    "homepage": "http://dracony.org"
-                }
-            ],
-            "description": "Validation library for PHPixie",
-            "homepage": "http://phpixie.com",
-            "keywords": [
-                "email"
-            ],
-            "time": "2014-01-24 14:19:41"
+            "time": "2016-01-12 15:18:10"
         },
         {
             "name": "phpixie/haml",
@@ -367,75 +471,36 @@
             "time": "2013-08-27 16:02:24"
         },
         {
-            "name": "phpixie/image",
-            "version": "dev-master",
+            "name": "phpixie/orm",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dracony/PHPixie-Image.git",
-                "reference": "f5ee271b7beabf69bc75ebb29ace73e483968698"
+                "url": "https://github.com/PHPixie/ORM.git",
+                "reference": "427a6fe3f89689855fd74f72d50d6d664ea0c2a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dracony/PHPixie-Image/zipball/f5ee271b7beabf69bc75ebb29ace73e483968698",
-                "reference": "f5ee271b7beabf69bc75ebb29ace73e483968698",
+                "url": "https://api.github.com/repos/PHPixie/ORM/zipball/427a6fe3f89689855fd74f72d50d6d664ea0c2a2",
+                "reference": "427a6fe3f89689855fd74f72d50d6d664ea0c2a2",
                 "shasum": ""
             },
             "require": {
-                "phpixie/core": "2.*@dev"
+                "phpixie/database": "~3.0",
+                "phpixie/slice": "~3.0"
+            },
+            "require-dev": {
+                "phpixie/test": "~3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "PHPixie": "classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Tsiupa",
-                    "email": "draconyster@gmail.com",
-                    "homepage": "http://dracony.org"
-                }
-            ],
-            "description": "PHPixie Image library",
-            "homepage": "http://phpixie.com",
-            "keywords": [
-                "gd",
-                "gmagick",
-                "image",
-                "imagick"
-            ],
-            "time": "2014-11-17 11:18:39"
-        },
-        {
-            "name": "phpixie/orm",
-            "version": "2.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHPixie/ORM.git",
-                "reference": "82048e94f41e3fd4483480dc6709937d009ea18e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPixie/ORM/zipball/82048e94f41e3fd4483480dc6709937d009ea18e",
-                "reference": "82048e94f41e3fd4483480dc6709937d009ea18e",
-                "shasum": ""
-            },
-            "require": {
-                "phpixie/db": "2.*@dev"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "PHPixie": "classes/"
+                "psr-4": {
+                    "PHPixie\\": "src/PHPixie",
+                    "PHPixie\\Tests\\": "tests/PHPixie/Tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -455,11 +520,67 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-03-04 15:55:04"
+            "time": "2015-10-27 21:35:09"
+        },
+        {
+            "name": "phpixie/security",
+            "version": "3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPixie/Security.git",
+                "reference": "b10a94dd18d9b784691f67d21815681c7c863ece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPixie/Security/zipball/b10a94dd18d9b784691f67d21815681c7c863ece",
+                "reference": "b10a94dd18d9b784691f67d21815681c7c863ece",
+                "shasum": ""
+            },
+            "require": {
+                "ircmaxell/password-compat": "^1.0",
+                "paragonie/random_compat": "^1.0",
+                "phpixie/database": "~3.0",
+                "phpixie/slice": "~3.0"
+            },
+            "require-dev": {
+                "phpixie/test": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPixie\\": "src/PHPixie",
+                    "PHPixie\\Tests\\": "tests/PHPixie/Tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Tsiupa",
+                    "email": "draconyster@gmail.com",
+                    "homepage": "http://dracony.org"
+                }
+            ],
+            "description": "SEcurity library for PHPixie",
+            "homepage": "http://phpixie.com",
+            "keywords": [
+                "password",
+                "random",
+                "security",
+                "token"
+            ],
+            "time": "2015-10-10 23:59:36"
         },
         {
             "name": "phpixie/slice",
-            "version": "dev-master",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPixie/Slice.git",
@@ -551,57 +672,6 @@
                 "psr-6"
             ],
             "time": "2015-12-11 02:52:07"
-        },
-        {
-            "name": "swiftmailer/swiftmailer",
-            "version": "v4.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "ae540bed1079c07aa12e9e62d9d8d4fc49bbdff2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/ae540bed1079c07aa12e9e62d9d8d4fc49bbdff2",
-                "reference": "ae540bed1079c07aa12e9e62d9d8d4fc49bbdff2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "lib/swift_required.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Chris Corbyn"
-                }
-            ],
-            "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
-            "keywords": [
-                "mail",
-                "mailer"
-            ],
-            "time": "2013-04-11 10:22:09"
         },
         {
             "name": "symfony/yaml",
@@ -718,15 +788,9 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "phpixie/core": 20,
-        "phpixie/db": 20,
-        "phpixie/orm": 20,
-        "phpixie/auth": 20,
         "phpixie/haml": 20,
-        "mthaml/mthaml": 20,
-        "phpixie/email": 20,
-        "phpixie/image": 20,
-        "phpixie/cache": 20,
-        "phpixie/slice": 20
+        "phpixie/auth-orm": 20,
+        "mthaml/mthaml": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
