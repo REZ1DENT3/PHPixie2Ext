@@ -12,5 +12,7 @@ class Db extends Page
         $this->view->title = 'Test';
         $this->view->subview = 'hello';
         $this->view->message = 'Have fun coding';
+
+        $this->db = 'default';
     }
 }

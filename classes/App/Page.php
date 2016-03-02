@@ -29,7 +29,7 @@ class Page extends \Ext\Controller
                 break;
 
             case 'db':
-                $this->_row = $this->pixie->database->get($value);
+                $this->_row[$name] = $this->pixie->database->get($value);
                 break;
         }
     }
