@@ -1,7 +1,0 @@
-default:
-  user: "root"
-  password: ""
-  driver: "PDO"
-  connection: "mysql:host=localhost;dbname=pixies"
-  db: "pixies"
-  host: "localhost"

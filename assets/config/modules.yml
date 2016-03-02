@@ -1,13 +1,10 @@
 2-dev:
   haml: '\PHPixie\Haml'
-3-dev: # todo
-  db: '\PHPixie\Database'
+3-dev:
   orm: '\PHPixie\ORM'
   auth: '\PHPixie\Auth'
-  email: '\PHPixie\Email'
-  image: '\PHPixie\Image'
-  cache: '\PHPixie\Cache'
-  slice: '\PHPixie\Slice'
   http: '\PHPixie\HTTP'
+  slice: '\PHPixie\Slice'
+  database: '\PHPixie\Database'
   security: '\PHPixie\Security'
   authLogin: '\PHPixie\AuthLogin'

@@ -18,15 +18,12 @@ class Page extends \Ext\Controller
         if (isset($this->_row[$name])) {
             return $this->_row[$name];
         }
-        return null;
+        throw new \Exception("Property {$name} not found on " . get_class($this));
     }
 
     public function __set($name, $value)
     {
-        if (isset($this->_row[$name])) {
-            $this->_row[$name] = $value;
-        }
-        else if ($name == 'view') {
+        if ($name == 'view') {
             $this->_row[$name] = $this->pixie->haml->get($value);
         }
     }

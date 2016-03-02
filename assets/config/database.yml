@@ -1,0 +1,10 @@
+default:
+  user: 'root'
+  password: ''
+  driver: 'pdo'
+  connection: 'mysql:host=localhost;dbname=pixies'
+other:
+  driver: 'mongo'
+  database: 'phpixie'
+  user: 'pixie'
+  password: 'password'
