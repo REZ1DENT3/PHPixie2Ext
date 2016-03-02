@@ -30,11 +30,6 @@ class Pixie extends \PHPixie\Pixie
         if (isset($this->modules[$name])) {
             return $this->instances[$name] = new $this->modules[$name]($this);
         }
-        switch ('a') {
-            case 'b':
-                break;
-            default:
-        }
 
         if (in_array($name, array_keys($this->modules3x))) {
 
