@@ -1,5 +1,6 @@
 2-dev:
   haml: '\PHPixie\Haml'
+  i18n: '\Ext\i18n'
 3-dev:
   orm: '\PHPixie\ORM'
   auth: '\PHPixie\Auth'

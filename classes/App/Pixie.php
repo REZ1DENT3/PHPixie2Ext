@@ -5,6 +5,8 @@ namespace App;
 /**
  * @property-read \PHPixie\Haml $haml Haml module
  * @property-read \Ext\Config $config Configuration handler
+ * @property-read \Ext\i18n $i18n Localizations handler
+ * @property-read \PHPixie\Cookie $cookie Cookie
  */
 class Pixie extends \PHPixie\Pixie
 {
@@ -40,8 +42,6 @@ class Pixie extends \PHPixie\Pixie
         if (isset($this->modules[$name])) {
             return $this->instances[$name] = new $this->modules[$name]($this);
         }
-
-        // todo https://github.com/nxeed/PHPixie-Nxeed-I18n
 
         if (in_array($name, array_keys($this->modules3x))) {
 

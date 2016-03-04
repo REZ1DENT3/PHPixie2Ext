@@ -73,7 +73,6 @@ class Config extends \PHPixie\Config
 
     }
 
-
     /**
      * Writes a configuration group back to the file it was loaded from
      *
@@ -81,10 +80,9 @@ class Config extends \PHPixie\Config
      */
     public function write($group)
     {
-        // todo
-//        $this->get_group($group);
-//        $group = $this->groups[$group];
-//        file_put_contents($group['file'], "<?php\r\nreturn " . var_export($group['options'], true) . ";");
+        $this->get_group($group);
+        $group = $this->groups[$group];
+        file_put_contents($group['file'], "");
     }
 
 }

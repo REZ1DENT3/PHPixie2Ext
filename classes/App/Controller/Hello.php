@@ -13,9 +13,11 @@ class Hello extends \App\Page
     public function defaultAction()
     {
         $this->view = 'main';
-        $this->view->title = 'hello';
+
         $this->view->subview = 'hello';
-        $this->view->message = 'Have fun coding';
+
+        $this->view->title = $this->pixie->i18n->get('hello.title');
+        $this->view->message = $this->pixie->i18n->get('hello.message');
     }
 
     public function jsonAction()
