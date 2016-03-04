@@ -2,7 +2,9 @@ composer.phar
 /vendor/
 /assets/rendered/*.php
 /web/assets/css/*.css
+/web/assets/css/*.css.map
 /web/assets/js/*.js
+/web/assets/js/*.js.map
 
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
