@@ -78,15 +78,14 @@ class Pixie extends \PHPixie\Pixie
 
     protected function after_bootstrap()
     {
-        $this->modules = $this->config->get('modules.2-dev');
-        $this->modules3x = $this->config->get('modules.3-dev');
-        date_default_timezone_set('Europe/Moscow');
-        mb_internal_encoding('UTF-8');
-    }
+        $this->modules = $this->config->get('config.modules.2-dev', []);
+        $this->modules3x = $this->config->get('config.modules.3-dev', []);
 
-    public function getDirectoryPublic()
-    {
-        return $this->root_dir . 'public/';
+        mb_internal_encoding(
+            $this->config->get('config.encoding', 'UTF-8'));
+
+        date_default_timezone_set(
+            $this->config->get('config.timezone', 'Europe/Moscow'));
     }
 
     public function controller($class)
