@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-use t1st3\JSONMin\JSONMin;
 
 /**
  * Base controller
