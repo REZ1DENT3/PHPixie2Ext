@@ -41,6 +41,8 @@ class Pixie extends \PHPixie\Pixie
             return $this->instances[$name] = new $this->modules[$name]($this);
         }
 
+        // todo https://github.com/nxeed/PHPixie-Nxeed-I18n
+
         if (in_array($name, array_keys($this->modules3x))) {
 
             switch ($this->modules3x[$name]) {
@@ -106,6 +108,42 @@ class Pixie extends \PHPixie\Pixie
         }
 
         return new $class($this);
+
+    }
+
+    /**
+     * Bootstraps the project
+     *
+     * @param  string $root_dir Root directory of the application
+     * @return $this
+     */
+    public function bootstrap($root_dir)
+    {
+
+        $this->root_dir = rtrim($root_dir, '/') . '/';
+        $this->app_namespace = __NAMESPACE__ . '\\';
+
+        $this->set_asset_dirs();
+        $this->debug->init();
+
+        foreach ($this->config->get('routes') as $name => $rule) {
+            $this->router->add(
+                $this->route(
+                    $name,
+                    $rule[0],
+                    $rule[1],
+                    $this->arr($rule, 2, null)
+                )
+            );
+        }
+
+        foreach ($this->modules as $name => $class) {
+            $this->$name = new $class($this);
+        }
+
+        $this->after_bootstrap();
+
+        return $this;
 
     }
 
