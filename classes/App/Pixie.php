@@ -75,7 +75,9 @@ class Pixie extends \PHPixie\Pixie
     public function controller($class)
     {
         if (!class_exists($class)) {
-            throw new \PHPixie\Exception\PageNotFound("Class {$class} doesn't exist");
+//            throw new \PHPixie\Exception\PageNotFound("Class {$class} doesn't exist");
+
+            die('Controller not found!');
         }
         return new $class($this);
     }

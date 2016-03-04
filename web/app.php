@@ -1,8 +1,7 @@
 <?php
 
-$root = dirname(__DIR__);
-$loader = require $root . '/vendor/autoload.php';
-$loader->add('', $root . '/classes/');
+require_once '../vendor/autoload.php';
 
 $pixie = new \App\Pixie;
-$pixie->bootstrap($root)->handle_http_request();
+$pixie->bootstrap(dirname(__DIR__))
+    ->handle_http_request();

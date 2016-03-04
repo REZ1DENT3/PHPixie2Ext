@@ -2,16 +2,44 @@
 
 namespace App;
 
+//http://docs.phalconphp.ru/ru/latest/reference/tutorial-rest.html
+
+//http://stackoverflow.com/questions/12806386/standard-json-api-response-format
+//http://eax.me/rest/
+//http://www.tutorialspoint.com/restful/restful_introduction.htm
+
 abstract class RESTful extends Page
 {
 
-    public function actionDefault($data)
+    const OK = 'OK';
+    const FOUND = "FOUND";
+    const ERROR = 'ERROR';
+
+    private $_status = self::OK;
+    private $_messages = array();
+
+    public function actionDefault()
     {
-        return $data;
+        $this->addMessage('Action not found');
+    }
+
+    public function addMessage($msg)
+    {
+        $this->_messages[] = $msg;
+    }
+
+    public function setStatus($status)
+    {
+        $this->_status = $status;
     }
 
     public function run($action)
     {
+
+        if (!$this->request->param('__API__')) {
+
+            die('Not found!');
+        }
 
         $action .= ucfirst(strtolower($this->request->method));
 
@@ -19,7 +47,7 @@ abstract class RESTful extends Page
             $action = 'actionDefault';
         }
 
-        $data = null;
+        $data = [];
         $this->execute = true;
 
         $this->before();
@@ -34,8 +62,24 @@ abstract class RESTful extends Page
             );
         }
 
+        $_data = array(
+            'status' => $this->_status
+        );
+
+        if (!empty($this->_messages)) {
+            $_data['messages'] = $this->_messages;
+        }
+
+        if (!empty($this->_messages)) {
+            $_data['messages'] = $this->_messages;
+        }
+
+        if (!empty($data)) {
+            $_data['data'] = $data;
+        }
+
         if ($this->execute) {
-            $this->next($data);
+            $this->next($_data);
         }
 
     }

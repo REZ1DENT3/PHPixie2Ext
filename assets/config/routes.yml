@@ -1,10 +1,11 @@
 api:
-  - "/api/v<version>/<action>(/<id>)"
+  - '/api/v<version>/<controller>(/<action>(/<data>))'
   -
-    controller: "api"
+    action: 'default'
+    __API__: 1
 
 default:
-  - "(/<controller>(/<action>(/<id>)))"
+  - '(/<controller>(/<action>(/<id>)))'
   -
-    controller: "hello"
-    action: "default"
+    controller: 'hello'
+    action: 'default'
