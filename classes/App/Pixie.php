@@ -82,9 +82,9 @@ class Pixie extends \PHPixie\Pixie
         mb_internal_encoding('UTF-8');
     }
 
-    public function getDirPublic()
+    public function getDirectoryPublic()
     {
-        return $this->root_dir;
+        return $this->root_dir . 'public/';
     }
 
     public function controller($class)

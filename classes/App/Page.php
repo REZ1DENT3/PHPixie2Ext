@@ -36,6 +36,13 @@ class Page extends \Ext\Controller
 
     public function next($data)
     {
+        try {
+            $viewIssetAndObject = is_object($this->view);
+        }
+        catch (\Exception $e) {
+            $viewIssetAndObject = false;
+        }
+
         if (is_array($data)) {
             $this->response->add_header('Content-Type: application/json');
             $this->response->body = json_encode($data);
@@ -44,8 +51,7 @@ class Page extends \Ext\Controller
             $this->response->add_header('Content-Type: application/json');
             $this->response->body = $data;
         }
-        else if (isset($this->view) &&
-            is_object($this->view) &&
+        else if ($viewIssetAndObject &&
             in_array('PHPixie\View', class_parents($this->view))) {
 
             $this->response->body = $this->view->render();

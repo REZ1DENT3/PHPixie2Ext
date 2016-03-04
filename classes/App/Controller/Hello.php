@@ -5,9 +5,9 @@ namespace App\Controller;
 class Hello extends \App\Page
 {
 
-    public function testAction()
+    public function publicAction()
     {
-        return $this->pixie->getDirPublic();
+        return $this->pixie->getDirectoryPublic();
     }
 
     public function defaultAction()

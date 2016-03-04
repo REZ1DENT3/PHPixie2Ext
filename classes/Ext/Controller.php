@@ -23,7 +23,8 @@ abstract class Controller extends \PHPixie\Controller
         $action .= 'Action';
 
         if (!method_exists($this, $action)) {
-            throw new \PHPixie\Exception\PageNotFound("Method {$action} doesn't exist in " . get_class($this));
+            //throw new \PHPixie\Exception\PageNotFound("Method {$action} doesn't exist in " . get_class($this));
+            die('Method not found!');
         }
 
         if ((int)$this->request->param('__API__')) {
