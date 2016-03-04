@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\API;
 
-class APIUsers extends \App\RESTful
+class Users extends \App\RESTful
 {
 
     public function defaultGet($data)

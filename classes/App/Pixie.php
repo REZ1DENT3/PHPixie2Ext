@@ -88,7 +88,7 @@ class Pixie extends \PHPixie\Pixie
         $request = $this->http_request();
         if ((int)$request->param('__API__')) {
             $controller = ucfirst($request->param('controller'));
-            $class = str_replace("\\" . $controller, "\\API" . $controller, $class);
+            $class = str_replace("\\" . $controller, "\\API\\" . $controller, $class);
         }
 
         if (!class_exists($class)) {

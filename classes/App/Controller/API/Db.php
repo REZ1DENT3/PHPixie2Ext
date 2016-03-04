@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\API;
 
 use App\RESTful;
 
-class APIDb extends RESTful
+class Db extends RESTful
 {
     public function defaultGet()
     {
