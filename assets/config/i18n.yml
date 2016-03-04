@@ -1,5 +1,5 @@
 #lifetime: 86400
-default: 'ru'
+default: 'en'
 list:
   - 'ru'
   - 'en'

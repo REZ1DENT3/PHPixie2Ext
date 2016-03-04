@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c24e7a4c-a001-48fc-89ec-cc58a146c1d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/config/i18n.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/locals/en/hello.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/locals/ru/hello.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/Ext/i18n.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/config/modules.yml" afterPath="$PROJECT_DIR$/assets/config/modules.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/App/Controller/Hello.php" afterPath="$PROJECT_DIR$/classes/App/Controller/Hello.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/App/Pixie.php" afterPath="$PROJECT_DIR$/classes/App/Pixie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Ext/Config.php" afterPath="$PROJECT_DIR$/classes/Ext/Config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/config/i18n.yml" afterPath="$PROJECT_DIR$/assets/config/i18n.yml" />
     </list>
     <ignored path="phpixie2new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/Ext/Config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4516129">
+            <state vertical-scroll-proportion="-9.692307">
               <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding />
             </state>
@@ -79,31 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="i18n.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="i18n.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/config/i18n.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hello.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/locals/ru/hello.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/App/Page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.307693">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.02910959">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -159,9 +131,9 @@
         <option value="$PROJECT_DIR$/assets/config/modules.yml" />
         <option value="$PROJECT_DIR$/classes/App/Pixie.php" />
         <option value="$PROJECT_DIR$/assets/locals/ru/hello.yml" />
-        <option value="$PROJECT_DIR$/assets/config/i18n.yml" />
         <option value="$PROJECT_DIR$/classes/Ext/i18n.php" />
         <option value="$PROJECT_DIR$/classes/Ext/Config.php" />
+        <option value="$PROJECT_DIR$/assets/config/i18n.yml" />
       </list>
     </option>
   </component>
@@ -1002,22 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/locals/ru/hello.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/config/i18n.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Ext/i18n.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
@@ -1028,8 +984,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/Ext/Config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4516129">
+        <state vertical-scroll-proportion="-9.692307">
           <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/locals/ru/hello.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02910959">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/config/i18n.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02910959">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
           <folding />
         </state>
       </provider>
