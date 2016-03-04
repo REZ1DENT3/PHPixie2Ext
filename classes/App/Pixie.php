@@ -9,11 +9,21 @@ namespace App;
 class Pixie extends \PHPixie\Pixie
 {
 
+    protected $request = null;
     protected $modules3x = array();
 
     public function __construct()
     {
         $this->instance_classes['config'] = '\Ext\Config';
+    }
+
+    public function http_request()
+    {
+        if ($this->request) {
+            return $this->request;
+        }
+        $this->request = parent::http_request();
+        return $this->request;
     }
 
     public function __get($name)
@@ -74,12 +84,20 @@ class Pixie extends \PHPixie\Pixie
 
     public function controller($class)
     {
+
+        $request = $this->http_request();
+        if ((int)$request->param('__API__')) {
+            $controller = ucfirst($request->param('controller'));
+            $class = str_replace("\\" . $controller, "\\API" . $controller, $class);
+        }
+
         if (!class_exists($class)) {
 //            throw new \PHPixie\Exception\PageNotFound("Class {$class} doesn't exist");
-
             die('Controller not found!');
         }
+
         return new $class($this);
+
     }
 
 }

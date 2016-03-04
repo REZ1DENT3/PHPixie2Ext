@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class Users extends \App\RESTful
+class APIUsers extends \App\RESTful
 {
 
     public function defaultGet($data)

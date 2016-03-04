@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\RESTful;
 
-class Db extends RESTful
+class APIDb extends RESTful
 {
     public function defaultGet()
     {
