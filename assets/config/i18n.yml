@@ -1,4 +1,4 @@
-#lifetime: 86400
+lifetime: 86400
 default: 'en'
 list:
   - 'ru'
