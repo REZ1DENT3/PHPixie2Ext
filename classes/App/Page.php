@@ -44,7 +44,10 @@ class Page extends \Ext\Controller
             $this->response->add_header('Content-Type: application/json');
             $this->response->body = $data;
         }
-        else if (is_object($this->view) && in_array('PHPixie\View', class_parents($this->view))) {
+        else if (isset($this->view) &&
+            is_object($this->view) &&
+            in_array('PHPixie\View', class_parents($this->view))) {
+
             $this->response->body = $this->view->render();
         }
         else {

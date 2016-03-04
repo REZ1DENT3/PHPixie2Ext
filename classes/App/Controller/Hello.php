@@ -5,6 +5,11 @@ namespace App\Controller;
 class Hello extends \App\Page
 {
 
+    public function testAction()
+    {
+        return $this->pixie->getDirPublic();
+    }
+
     public function defaultAction()
     {
         $this->view = 'main';

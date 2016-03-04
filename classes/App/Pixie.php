@@ -82,13 +82,22 @@ class Pixie extends \PHPixie\Pixie
         mb_internal_encoding('UTF-8');
     }
 
+    public function getDirPublic()
+    {
+        return $this->root_dir;
+    }
+
     public function controller($class)
     {
 
         $request = $this->http_request();
         if ((bool)$request->param('__API__')) {
             $controller = ucfirst($request->param('controller'));
-            $class = str_replace("\\Controller\\" . $controller, "\\Controller\\API\\" . $controller, $class);
+            $class = str_replace(
+                "\\Controller\\" . $controller,
+                "\\Controller\\API\\" . $controller,
+                $class
+            );
         }
 
         if (!class_exists($class)) {
